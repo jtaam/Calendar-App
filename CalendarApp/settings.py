@@ -26,7 +26,8 @@ SECRET_KEY = 't4o-l%ssvg7!ek$tmf$$f4zc5vk-5yyd^zr6_&d!_t5#o32u49'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# Login
+LOGIN_URL = '/login'
 LOGIN_REDIRECT_URL = '/calendar'
 # Application definition
 
