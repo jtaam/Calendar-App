@@ -2,7 +2,9 @@
 {% block content %}
     <div class="container">
         <div class="row">
+            {% for entry in entries %}
             {% include 'myapp/_calendar_entry.html' %}
+            {% endfor %}
         </div>
     <!-- /.row -->
     </div>

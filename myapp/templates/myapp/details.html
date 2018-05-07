@@ -1,0 +1,10 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+    <div class="container jumbotron">
+        <h1>{{ entry.name }}</h1>
+        <hr>
+        <h5>{{ entry.date }}</h5>
+        <p>{{ entry.description }}</p>
+    </div>
+<!-- /.container -->
+{% endblock %}
