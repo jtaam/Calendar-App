@@ -1,12 +1,25 @@
 {% extends 'myapp/base.html' %}
 {% block content %}
     <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <h1>Calendar</h1>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-8">
+                <button onclick="window.location='{% url 'add' %}'" type="button" class="btn btn-success">Add Entry</button>
+            </div>
+            <!-- /.col-lg-8 -->
+        </div>
+        <!-- /.row -->
+        <hr>
         <div class="row">
             {% for entry in entries %}
-            {% include 'myapp/_calendar_entry.html' %}
+                {% include 'myapp/_calendar_entry.html' %}
             {% endfor %}
         </div>
-    <!-- /.row -->
+        <!-- /.row -->
     </div>
     <!-- /.container -->
 {% endblock %}

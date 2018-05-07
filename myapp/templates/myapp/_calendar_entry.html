@@ -2,9 +2,11 @@
     <br>
     <h2>{{ entry.name }}</h2>
     <h4>{{ entry.date }}</h4>
+{#    <h4>{{ entry.date | date:"Y M D" }}</h4>#}
     <p>
-        {{ entry.description }}
+        {{ entry.description | truncatechars:100 }}
     </p>
     <button onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn btn-primary">view details</button>
+    <button data-id="{{ entry.id }}" onclick="deleteCalendarEntry(this)" class="btn btn-danger">delete</button>
 </div>
 <!-- /.col-lg-4 -->

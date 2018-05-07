@@ -1,0 +1,29 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+    <div class="container form-group">
+        <br>
+    <div class="row">
+        <div class="col-lg-4">
+            <h1>Add a New Entry</h1>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-8">
+            <button onclick="window.location='{% url 'index' %}'" type="button" class="btn btn-info">go back</button>
+        </div>
+        <!-- /.col-lg-8 -->
+    </div>
+    <!-- /.row -->
+        <hr>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                {{ field.errors }}
+                <label>{{ field.label }}</label>
+                <input type="text" name="{{ field.name }}" class="form-control" placeholder="{{ field.label }}"/>
+            {% endfor %}
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- /.container -->
+{% endblock %}

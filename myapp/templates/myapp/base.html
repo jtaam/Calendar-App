@@ -11,5 +11,10 @@
     {% block content %}
 
     {% endblock %}
+    <script src="http://127.0.0.1:8888/LocalAssets/jquery/jquery-2.1.4.min.js"></script>
+    <script src="{% static 'myapp/js/calendar.js' %}"></script>
+    <script>
+        var csrf_token = '{{ csrf_token }}'
+    </script>
 </body>
 </html>
